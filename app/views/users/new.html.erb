@@ -1,2 +1,15 @@
-<h1>New route works successfully</h1>
-<p>Hello, world</p>
+<form accept-charset="UTF-8" method="POST" action="/users">
+
+  <label for="user[username]">Username:</label>
+  <input type="text" name="user[username]"> <br><br>
+  
+  <label for="user[email]">Email:</label>
+  <input type="text" name="user[email]"><br><br>
+
+  <label for="user[password]">Password:</label>
+  <input type="password" name="user[password]"> <br><br>
+
+  <input type="submit" value="Finish">
+
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+</form>
