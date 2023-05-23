@@ -1,0 +1,23 @@
+<% @user.errors.full_messages.each do |message| %>
+  <div><%= message %></div>
+<% end %>
+
+
+<%= form_with model: @user do |user_form| %>
+  <%= user_form.label :username, "Username: " %>
+  <%= user_form.text_field :username %>
+
+  <br>
+
+  <%= user_form.label :email, "E-mail:" %>
+  <%= user_form.email_field :email %>
+
+  <br>
+
+  <%= user_form.label :password, "Password:" %>
+  <%= user_form.password_field :password %>
+  
+  <br>
+
+  <%= user_form.submit %>
+<% end %>
